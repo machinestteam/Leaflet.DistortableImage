@@ -1188,13 +1188,13 @@ L.DistortableImage.EditToolbar = L.Toolbar2.Popup.extend({
 	options: {
 		actions: [
 			ToggleTransparency,
-			RemoveOverlay,
+			//RemoveOverlay,
 			ToggleOutline,
-			ToggleEditable,
+			//ToggleEditable,
 			ToggleRotateDistort,
-			ToggleExport,
-      EnableEXIF,
-      ToggleOrder
+			ToggleExport
+      //EnableEXIF,
+      //ToggleOrder
     ]
 	},
 	
