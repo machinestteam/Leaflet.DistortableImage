@@ -1493,10 +1493,10 @@ L.DistortableImage.Edit = L.Handler.extend({
   _toggleTransparency: function() {
     var image = this._overlay._image,
       opacity;
-
+    
     this._transparent = !this._transparent;
     opacity = this._transparent ? this.options.opacity : 1;
-
+    alert(opacity);
     L.DomUtil.setOpacity(image, opacity);
     image.setAttribute("opacity", opacity);
   },
