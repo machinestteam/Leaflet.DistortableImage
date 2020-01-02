@@ -1491,14 +1491,16 @@ L.DistortableImage.Edit = L.Handler.extend({
   },
 
   _toggleTransparency: function() {
-    var image = this._overlay._image,
-      opacity;
-    
-    this._transparent = !this._transparent;
-    opacity = this._transparent ? this.options.opacity : 1;
-    alert(opacity);
-    L.DomUtil.setOpacity(image, opacity);
-    image.setAttribute("opacity", opacity);
+    var image = this._overlay._image, opacity;
+    //this._transparent = !this._transparent;
+    //opacity = this._transparent ? this.options.opacity : 1;
+    opacity = this.options.opacity ? this.options.opacity :1;
+    opacity = opacity - 0.1 ;
+    if(opacity < 0.2  )
+         opacity =1;
+    this.options.opacity=opacity;
+    L.DomUtil.setOpacity(image, this.options.opacity);
+    image.setAttribute("opacity", this.options.opacity);
   },
 
   _toggleOutline: function() {
